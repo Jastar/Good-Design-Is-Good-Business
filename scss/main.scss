@@ -1,0 +1,552 @@
+@mixin font ($size:null, $height:null, $family:null, $color:null) {
+	font-size: $size;
+	line-height: $height;
+	font-family: $family;
+	color: $color;
+}
+
+h1 {@include font(60px, auto, "BebasNeueRegular", #cccece)}
+h2 {@include font(40px, 40px, "BebasNeueRegular", #2190c1)}
+h3 {@include font(30px, auto, "BreeSerifRegular", #f98561)}
+h4 {@include font(27px, 40px, "BebasNeueRegular", #2190c1)}
+h5 {@include font(25px, auto, "BreeSerifRegular", #515862)}
+h6 {@include font(17px, auto, "BreeSerifRegular", #515862)}
+
+body {@include font(11px, 15px, "UbuntuRegular", #515862);}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+
+
+
+/**************************************************** NAV ****************************************************/
+	
+	nav {
+		img {
+			margin: 30px auto;
+		}
+
+		ul.menu, ul.menuXS {
+			padding: 0px;
+				li {
+					a {
+						text-decoration: none;
+							&:hover, &:active, &:focus {
+									background-color: #12a3d6;
+									color: #fff;
+								};
+					}
+				}
+
+				li.blog, li.blogXS {
+					a {
+						&:hover {
+							background-color: #f98561;
+							color: #000;
+						};
+					}
+				}
+		}
+
+		form, ul.menuXS {
+			input[type="search"], li.formXS input[type="search"] {
+				width: 85px;
+				border: none;
+				outline: none;
+				text-align: right;
+				@include font($family: "UbuntuRegular", $color: #515862 );
+					&:focus {
+						border-bottom: 1px solid #949494;
+					};
+			}
+
+			button[type="submit"], li.formXS button[type="search"] {
+				background-color: transparent;
+				border: none;
+				outline: none;
+				color: #f98561;
+				margin: 0px auto;
+					&:hover {
+						color: #b95f43;
+					};
+			}
+		}
+
+		button#menu {
+			margin: 20px auto;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			color: #000;
+				&:active {
+					-webkit-transform: translate(2px, 2px);
+					-ms-transform: translate(2px, 2px);
+					-o-transform: translate(2px, 2px);
+					transform: translate(2px, 2px);
+				};
+		}
+
+		ul.menu {
+			margin: 30px auto;
+				li {
+					display: inline;
+					margin-right: 15px;
+						a {
+							@include font(14px, $family: "UbuntuRegular", $color: #515862);
+							padding: 40px 15px;
+						}
+				}
+
+				li.blog {
+					background-color: #f98561;
+					padding: 10px 18px;
+					border-radius: 15px;
+						a {
+							padding: 7px 15px;
+							color: #fff;
+						}
+				}
+		}
+
+		form {
+			margin: 28px auto;
+			input[type="search"] {
+				@include font(12px);
+			}
+		}
+		
+		ul.menuXS {
+			display: none;
+			text-align: center;
+				li {
+					list-style-type: none;
+					margin: 0px auto;
+						a {
+							display: block;
+							padding: 30px;
+							@include font(24px, $color: #515862);
+						}
+				}
+
+				li.blogXS {
+					a {
+						display: block;
+					}
+				}
+
+				li.formXS {
+					form {
+						margin: 20px auto;
+						input[type="search"] {
+							padding: 0px;
+							@include font(24px);
+							-webkit-transition: width 0.5s;
+							-o-transition: width 0.5s;
+							transition: width 0.5s;
+								&:focus {
+									max-width: 90%;
+									width: 85%;
+								};
+
+						}
+					}
+				}
+		}
+	}
+/**************************************************** NAV ****************************************************/
+
+
+
+/**************************************************** SLIDER ****************************************************/
+
+	section#slider {
+		div.col-lg-12 {padding: 0px;}
+
+		div.owl-carousel {
+			div.owl-dots {
+				position: absolute;
+				bottom: 5%;
+				right: 10%;
+			}
+			
+			div.slide1 {
+				background: url("../images/slide1bg.png");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+
+			div.slide2 {
+				background-color: #b959b5;
+			}
+
+			div.slide3 {
+				background-color: #98bde2;
+			}
+
+			div.slide4 {
+				background-color: #5fbe8e;
+			}
+
+			div.slide5 {
+				background-color: #b4c857;
+			}
+
+			div.slide1, div.slide2, div.slide3, div.slide4, div.slide5 {
+
+				text-align: center;
+					h1 {
+						margin: 0px auto;
+					}
+
+					p {
+						@include font(14px, $family: "UbuntuRegular", $color: #cccece);
+						max-width: 570px;
+						text-indent: 16px;
+					}
+
+					button {
+						@include font(25px, $family: "UbuntuCondensedRegular", $color: #ffebca);
+						width: 100%;
+						max-width: 240px;
+						background-color: #f98561;
+						padding: 18px 20px;
+						outline: none;
+						border: none;
+						border-radius: 5px;
+							&:active {
+								-webkit-transform: translate(2px, 2px);
+								-ms-transform: translate(2px, 2px);
+								-o-transform: translate(2px, 2px);
+								transform: translate(2px, 2px);
+							};
+					}
+			}
+		}
+	}
+/**************************************************** SLIDER ****************************************************/
+
+
+
+/**************************************************** ourService ****************************************************/
+
+	section#ourService {
+		div.service {
+			@include font(22px, $family: "BebasNeueRegular", $color:#fff);
+			width: 100%;
+			max-width: 210px;
+			padding: 10px 25px;
+			margin: 0px auto 20px auto;
+			background-color: #2190c1;
+			border-radius: 5px;
+			position: relative;
+			top: -15px;
+			z-index: 1000;
+		}
+
+		span.fa-stack {
+			color: #2190c1;
+		}
+
+		h6 {
+			margin: 25px auto 10px auto;
+		}
+
+		p {
+			a {
+				@include font($family: "UbuntuBold");
+			}
+		}
+	}
+/**************************************************** ourService ****************************************************/
+
+
+
+/**************************************************** PORTFOLIO ****************************************************/
+
+	section#portfolio {
+		background-color: #2e3e4f;
+
+		h3 {margin: 55px auto;}
+
+		a {
+			@include font(11px, 15px, "UbuntuRegular", #fff);
+			display: block;
+			text-align: center;
+			max-width: 90px;
+			width: 100%;
+			padding: 10px;
+			background-color: #2190c1;
+			text-decoration: none;
+			border-radius: 5px;
+			margin: 50px 0px 50px auto;
+		}
+
+		div.col-lg-4 {
+			figure {
+				display: inline-block;
+				position: relative;
+				width: 100%;
+				max-width: 450px;
+
+				img {
+					width: 100%;
+					height: auto;
+					border: 10px solid #fff;
+				}
+
+				figcaption {
+					position: absolute;
+					top:40%;
+					bottom: 0%;
+					left: 0%;
+					right: 0%;
+					max-width: 450px;
+					width: 100%;
+					text-align: center;
+					
+						div.photo {
+							max-width: 450px;
+						}
+
+						div.details1, div.details2, div.details3 {
+							position: absolute;
+							top:0%;
+							bottom: 0%;
+							left: 0%;
+							right: 0%;
+							display: none;
+							text-align: center;
+							margin: 0 auto;
+							width: 100%;
+							max-width: 140px;
+							a {
+								display: block;
+								@include font(17px, $family: "BreeSerifRegular", $color: #fff);
+								padding: 5px 15px;
+								margin: 0px auto;
+								width: 140px;
+							}
+						}
+				}
+			}
+
+			h6 {
+				margin: 20px auto 0px auto;
+				color: #f98561;
+			}
+
+			p {
+				margin: 5px auto 75px auto;
+				color: #bcbcbc;
+			}
+		}
+
+	}
+/**************************************************** PORTFOLIO ****************************************************/
+
+
+
+/**************************************************** OFFER ****************************************************/
+
+	section#offer {
+		h2 {
+			margin: 40px auto 20px auto;
+		}
+
+		div.col-lg-12 p {
+			text-align: center;
+			@include font(12px, $color:#515862);
+			max-width: 650px;
+			margin: 0px auto 40px auto;
+		}
+		
+		h6 {
+			margin: 0 auto;
+			color: #2b99cc;
+		}
+
+		a {
+			display: block;
+			width: 60px;
+			@include font(12px, $color: #fff);
+			margin-left: auto;
+			text-align: center;
+			padding: 10px;
+			background-color: #2190c1;
+			text-decoration: none;
+			border-radius: 5px;
+				&:hover {
+					box-shadow: 0px 2px 5px #035669;
+				};
+		}
+	}
+/**************************************************** OFFER ****************************************************/
+
+
+
+/**************************************************** TESTIMONIALS ****************************************************/
+
+	section#testimonials {
+
+		blockquote {
+			margin: 0 auto;
+			max-width: 750px;
+				h5 {
+					@include font($height: 30px, $family:"BreeSerifRegular", $color:#515862);
+					margin: 0 auto;
+				}
+		}
+
+		p {
+			@include font(14px, 15px, "Ubuntu", #f98561);
+			margin: 60px auto 30px auto;
+				span {
+					@include font($family:"UbuntuBold", $color:#f98561);
+				}
+		}
+		ul#feedbacks {
+			padding: 0px;
+			margin: 0 auto;
+			text-align: center;
+				li {
+					display: inline-block;
+						a {
+							display: block;
+							width: 67px;
+							height: 88px;
+							background-repeat: no-repeat;
+								&:hover, &:active, &:focus {
+									background-position: 0 -89px;
+								};
+						}
+				}
+
+				li.comment1, li.comment3 {
+					a {
+						background: url("../images/women.png");
+							background-repeat: no-repeat;
+								&:hover, &:active, &:focus {
+									background-position: 0 -89px;
+								};
+					}
+				}
+
+				li.comment2 {
+					a {
+						background: url("../images/men.png");
+							background-repeat: no-repeat;
+								&:hover, &:active, &:focus {
+									background-position: 0 -89px;
+								};
+					}
+				}
+
+
+				.active {
+					a {
+						background: url("../images/women.png");
+						background-position: 0 -89px;
+					}
+				}
+		}
+
+		
+
+
+	}
+/**************************************************** TESTIMONIALS ****************************************************/
+
+
+
+/**************************************************** FOOTER ****************************************************/
+
+	footer {
+		background-color: #2e3e4f;
+		padding-bottom: 30px;
+
+			h3 {
+				@include font($height: 26px, $family: "BebasNeueRegular");
+				margin: 45px auto 25px auto;
+			}
+
+			p {
+				@include font(12px, 20px, $color: #a3afb2);
+				max-width: 180px;
+
+					a {
+						text-decoration: none;
+						color: #2190c1;
+					}
+			}
+
+			hr {
+				margin: 15px 0px;
+			}
+
+			span {
+				color: #2190c1;
+			}
+
+			form {
+
+					span {
+						display: block;
+						@include font(13px, 20px);
+						margin: 0px auto;
+					}
+				
+					input[type="email"] {
+						width: 100%;
+						@include font(13px, 20px, $color: #2190c1);
+						outline: none;
+						border: none;
+						padding: 5px;
+						border-radius: 5px;
+						margin: 15px auto;
+					}
+
+					input[type="submit"] {
+						display: block;
+						margin-left: auto;
+						@include font(13px, 20px, $color: #fff);
+						background-color: #2190c1;
+						padding: 5px 15px;
+						border: none;
+						outline: none;
+						border-radius: 5px;
+							&:active {
+								-webkit-transform: translate(2px, 2px);
+								-ms-transform: translate(2px, 2px);
+								-o-transform: translate(2px, 2px);
+								transform: translate(2px, 2px);
+							};
+					}	
+			}
+
+			div.col-lg-9 p {
+				margin: 5px auto 5px 10px;
+					a {
+						color: #f98561;
+						padding-bottom: 5px;
+							&:hover, &:active, &:focus {
+								text-decoration: none;
+								border-bottom: 1px solid #f98561;
+							};
+					}
+			}
+			
+			
+
+	}
+/**************************************************** FOOTER ****************************************************/

@@ -1,0 +1,50 @@
+/* font-family: "BebasNeueRegular"; */
+@font-face {
+	font-family: "BebasNeueRegular";
+	src: url("../fonts/BebasNeueRegular/BebasNeueRegular.eot");
+	src: url("../fonts/BebasNeueRegular/BebasNeueRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/BebasNeueRegular/BebasNeueRegular.woff") format("woff"),
+	url("../fonts/BebasNeueRegular/BebasNeueRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "BreeSerifRegular"; */
+@font-face {
+	font-family: "BreeSerifRegular";
+	src: url("../fonts/BreeSerifRegular/BreeSerif-Regular.eot");
+	src: url("../fonts/BreeSerifRegular/BreeSerif-Regular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/BreeSerifRegular/BreeSerif-Regular.woff") format("woff"),
+	url("../fonts/BreeSerifRegular/BreeSerif-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "UbuntuBold"; */
+@font-face {
+	font-family: "UbuntuBold";
+	src: url("../fonts/UbuntuBold/Ubuntu-Bold.eot");
+	src: url("../fonts/UbuntuBold/Ubuntu-Bold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/UbuntuBold/Ubuntu-Bold.woff") format("woff"),
+	url("../fonts/UbuntuBold/Ubuntu-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "UbuntuCondensedRegular"; */
+@font-face {
+	font-family: "UbuntuCondensedRegular";
+	src: url("../fonts/UbuntuCondensedRegular/UbuntuCondensed-Regular.eot");
+	src: url("../fonts/UbuntuCondensedRegular/UbuntuCondensed-Regular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/UbuntuCondensedRegular/UbuntuCondensed-Regular.woff") format("woff"),
+	url("../fonts/UbuntuCondensedRegular/UbuntuCondensed-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "UbuntuRegular"; */
+@font-face {
+	font-family: "UbuntuRegular";
+	src: url("../fonts/UbuntuRegular/Ubuntu-Regular.eot");
+	src: url("../fonts/UbuntuRegular/Ubuntu-Regular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/UbuntuRegular/Ubuntu.woff") format("woff"),
+	url("../fonts/UbuntuRegular/Ubuntu.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
